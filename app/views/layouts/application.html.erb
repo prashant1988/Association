@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JYOTI</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.js" %>
+  <%= javascript_include_tag "jquery-validation/languages/jquery.validationEngine-en.js" %>
+<%= javascript_include_tag "jquery-validation/jquery.validationEngine.js" %>
+<%= stylesheet_link_tag "jquery-validation/validationEngine.jquery.css" %>
+<%= stylesheet_link_tag "jquery-validation/template.css" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+<body>
+<h2>Edit</h2>	
+<%=form_for @new, :url=>{:action =>'update',:id=>@new.id} do |f|%>
+<p>name<%=f.text_field :name%></p>
+<p>age<%=f.text_field :age%></p>
+<%=f.submit 'update' %>
+<%end%>
+</body>
+</html>

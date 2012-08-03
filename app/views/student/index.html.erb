@@ -1,0 +1,13 @@
+<html>
+<body>
+	<%=image_tag "asso.jpg",{:height =>300,:width=>1000}%>
+<h2>Student</h2>
+<br/>
+<br/>
+<%=form_for :user,:url=>{:controller=>"student",:action=>"create",:id=>@fetch.id} do |f| %>
+<p>name<%=f.text_field :name%></p>
+<p>age<%=f.text_field :age%></p>
+<%=f.submit "submit"%>	
+<%end%>
+</body>
+</html>

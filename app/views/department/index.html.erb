@@ -1,0 +1,22 @@
+<html>
+	<script type="text/javascript">
+	jQuery.noConflict();
+        jQuery(document).ready(function(){
+        jQuery("#user").validationEngine();
+      });
+	</script>
+<body >
+	<%=image_tag "asso.jpg",{:height =>300,:width=>1000}%>
+<center>	
+<h2>Welcome to department</h2>
+</center>
+<h3>Department</h3>
+<br/>
+<br/>
+<%=form_for :gtpl,:url=>{:controller=>'department',:action=>'create'}, :html => {:id =>'user', :multipart => true } do |f|%>
+<p>Name:<%=f.text_field :name, :style => "width:200px; height :20px",:class=>"validate[required,custom[onlyLetterNumber]]"%></p>
+<p>Room No:<%=f.text_field :roomno, :style => "width:200px; height :20px",:class =>"validate[required]"%></p>
+<%=f.submit "submit"%>	
+<%end%>
+</body>
+</html>

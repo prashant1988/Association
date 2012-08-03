@@ -1,0 +1,25 @@
+<html>
+<body>
+<h2>Display students record:<h2>
+<br/>
+<br/>
+<table border="1" cellpadding="15">
+<tr>
+<th>name</th>
+<th>age</th>
+<th colspan=3>Action</th>
+</tr>
+
+<tr>
+
+<% @display.each do |s|%>	
+<td><%=s.name%></td>
+<td><%=s.age%></td>
+</tr>
+<%end%>
+</table></br></br>
+<%=link_to'back',{:controller=>'department',:action=>'view'}%>
+</body>
+</html>
+
+

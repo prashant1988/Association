@@ -1,0 +1,27 @@
+<html>
+<body>
+<h2>View</h2>	
+<table border="1" cellpadding="15">
+<tr>
+<th>Name</th>
+<th>Room.no</th>
+<th colspan=5>Action</th>
+</tr>
+<tr>
+
+<% @data.each do |i| %>
+  	<td><%= i.name %></td>
+  	<td><%= i.roomno%></td>
+    <td><%=link_to 'Show',:action=>"show",:id=>i.id %></td>
+    <td><%=link_to 'Edit',:action=>"edit",:id=>i.id %></td>
+  	<td><%=link_to 'Destroy',:action=>"delete",:id=>i.id %></td>
+    <td><%=link_to 'Add students',{:controller=>"student",:action=>"index",:id=>i.id}%></td>
+    <td><%=link_to 'Show students',{:controller=>'student',:action=>'display',:id=>i.id}%></td>
+
+    </tr>
+    <% end %>
+</table>
+<br/>
+<%=link_to 'Back',:action=>'index'%>
+</body>
+</html>

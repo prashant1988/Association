@@ -1,0 +1,8 @@
+<html>
+<body>
+<h2>Edit</h2>	
+<%=form_for @data, :url=>{:action =>'update',:id=>@data.id} do |f|%>
+<p>name<%=f.text_field :name%></p>
+<p>roomno<%=f.text_field :roomno%></p>
+<%=f.submit 'update' %>
+<%end%>
